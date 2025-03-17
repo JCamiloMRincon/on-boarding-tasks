@@ -43,31 +43,37 @@ jobs:
           dotnet tool install --global Microsoft.Playwright.CLI 
           dotnet build
           playwright install
-      
-      - name: Ensure Allure Results Directory
-        run: mkdir -p allure-results
 
-      - name: Install Allure NUnit Adapter
-        run: dotnet add ./tests/tests.csproj package Allure.NUnit
+      - name: Clean conflicting packages
+        run: |
+          dotnet remove ./tests/tests.csproj package NUnit.Allure || true
+          dotnet remove ./tests/tests.csproj package Allure.NUnit || true
 
-      - name: Run Playwright NUnit Tests with Allure
-        run: dotnet test ./tests/tests.csproj --configuration Release --results-directory "allure-results" --logger "Allure"
+      - name: Install Allure NUnit Adapter (correct version)
+        run: |
+          dotnet add ./tests/tests.csproj package Allure.NUnit
+          dotnet add ./tests/tests.csproj package Allure.Commons
+
+      - name: Restore, build, and run tests with TRX logger
+        run: |
+          dotnet restore
+          dotnet build --configuration Release
+          dotnet test ./tests/tests.csproj --configuration Release --results-directory "allure-results" --logger "trx;LogFileName=TestResults.trx"
 
       - name: Install Allure CLI
-        run: |
-          npm install -g allure-commandline
+        run: npm install -g allure-commandline
 
-      - name: Generate Allure Report
+      - name: Convert TRX to Allure Report
         run: |
-          allure generate allure-results --clean -o ./allure-report || echo "Allure report generation failed"
-          ls -la ./allure-report
+          mkdir -p allure-results
+          allure generate --clean -o ./allure-report || echo "Allure report generation failed"
 
       - name: Upload Allure Report Artifact
         uses: actions/upload-artifact@v4
         with:
           name: allure-report-${{ matrix.test_class }}-${{ github.run_id }}
           path: allure-report
-        
+
   merge-reports:
     needs: test
     runs-on: ubuntu-latest
@@ -82,17 +88,17 @@ jobs:
           pattern: allure-report-*
           merge-multiple: true
           path: combined-allure-report
-          
+      
       - name: Install Allure CLI in merge job
         run: |
           npm install -g allure-commandline
           echo "Allure version:"
           allure --version
-          
+      
       - name: Merge Allure Reports
         run: |
           allure generate combined-allure-report --clean -o final-allure-report || echo "Allure merge failed"
-
+      
       - name: Upload Final Merged Allure Report
         uses: actions/upload-artifact@v4
         with:

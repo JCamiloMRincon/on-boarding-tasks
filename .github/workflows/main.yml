@@ -46,9 +46,12 @@ jobs:
       
       - name: Ensure Allure Results Directory
         run: mkdir -p allure-results
-      
+
+      - name: Install Allure NUnit Adapter
+        run: dotnet add package Allure.NUnit
+
       - name: Run Playwright NUnit Tests with Allure
-        run: dotnet test --logger:"allure;LogFileName=allure-results"
+        run: dotnet test --configuration Release --results-directory "allure-results" --logger "Allure"
 
       - name: Install Allure CLI
         run: |
@@ -56,8 +59,7 @@ jobs:
 
       - name: Generate Allure Report
         run: |
-          mkdir -p TestResults
-          allure generate TestResults --clean -o ./allure-report
+          allure generate allure-results --clean -o ./allure-report || echo "Allure report generation failed"
           ls -la ./allure-report
 
       - name: Upload Allure Report Artifact

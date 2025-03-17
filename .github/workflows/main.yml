@@ -45,7 +45,7 @@ jobs:
           playwright install
 
       - name: Run Playwright Tests in Parallel
-        run: dotnet test --filter FullyQualifiedName~${{ matrix.test_class }} --logger "trx;LogFileName=test_results_${{ matrix.test_class }}.trx"
+        run: dotnet test --filter FullyQualifiedName~${{ matrix.test_class }} --logger "trx;LogFileName=test_results_${{ matrix.test_class }}.trx" -- Playwright.Headless=true
 
       - name: Upload Test Results
         if: always()

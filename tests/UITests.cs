@@ -14,7 +14,7 @@ namespace tests
         public async Task Setup()
         {
             _playwright = await Microsoft.Playwright.Playwright.CreateAsync();
-            _browser = await _playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions { Headless = false });
+            _browser = await _playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions { Headless = true });
             
             var context = await _browser.NewContextAsync();
             _page = await context.NewPageAsync();

@@ -59,11 +59,36 @@ jobs:
       - name: Upload Allure Report Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: allure-report-${{ github.run_id }}
+          name: allure-report-${{ matrix.test_class }}-${{ github.run_id }}
           path: allure-report
+        
+  merge-reports:
+    needs: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Download Allure Report Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: allure-report-*
+          merge-multiple: true
+          path: combined-allure-report
+
+      - name: Merge Allure Reports
+        run: |
+          allure generate combined-allure-report --clean -o final-allure-report
+
+      - name: Upload Final Merged Allure Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: final-allure-report-${{ github.run_id }}
+          path: final-allure-report
 
   deploy:
-    needs: test
+    needs: merge-reports
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
 
@@ -71,14 +96,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Download Allure Report
+      - name: Download Final Allure Report
         uses: actions/download-artifact@v4
         with:
-          name: allure-report-${{ github.run_id }}
-          path: allure-report
+          name: final-allure-report-${{ github.run_id }}
+          path: final-allure-report
 
       - name: Deploy Allure Report to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: allure-report
+          folder: final-allure-report

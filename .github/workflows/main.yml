@@ -96,7 +96,7 @@ jobs:
   deploy:
     needs: merge-reports
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: always()
 
     steps:
       - name: Checkout code

@@ -45,7 +45,7 @@ jobs:
           playwright install
 
       - name: Run Playwright NUnit Tests with Allure
-        run: dotnet test --logger:"trx;LogFileName=TestResults.trx" -- "TestRunParameters.Parameter(name=\"AllureResultsDirectory\", value=\"allure-results\")"
+        run: dotnet test --logger:"trx;LogFileName=TestResults.trx" -- "TestRunParameters.Parameter(name=\"AllureResultsDirectory\", value=\"TestResults\")"
 
       - name: Install Allure CLI
         run: |
@@ -53,8 +53,8 @@ jobs:
 
       - name: Generate Allure Report
         run: |
-          mkdir -p allure-results
-          allure generate allure-results --clean -o ./allure-report
+          mkdir -p TestResults
+          allure generate TestResults --clean -o ./allure-report
           ls -la ./allure-report
 
       - name: Upload Allure Report Artifact

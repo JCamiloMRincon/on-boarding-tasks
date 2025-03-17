@@ -1,0 +1,52 @@
+name: Playwright Tests CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Install dependencies
+        run: dotnet restore
+
+      - name: Build project
+        run: dotnet build --configuration Release
+
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        test_class: [UITests, APITests]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Install Playwright
+        run: dotnet tool install --global Microsoft.Playwright.CLI && playwright install
+
+      - name: Run Playwright Tests in Parallel
+        run: dotnet test --filter FullyQualifiedName~${{ matrix.test_class }} --logger "trx;LogFileName=test_results_${{ matrix.test_class }}.trx"
+
+      - name: Upload Test Results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-results-${{ matrix.test_class }}
+          path: test_results_${{ matrix.test_class }}.trx

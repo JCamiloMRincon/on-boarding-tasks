@@ -53,6 +53,7 @@ jobs:
         run: |
           dotnet add ./tests/tests.csproj package Allure.NUnit
           dotnet add ./tests/tests.csproj package Allure.Commons
+          dotnet add ./tests/tests.csproj package Allure.TestLogger
 
       - name: Restore, build, and run tests with Allure
         run: |

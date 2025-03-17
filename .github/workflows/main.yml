@@ -45,7 +45,7 @@ jobs:
           playwright install
 
       - name: Run Playwright NUnit Tests with Allure
-        run: dotnet test --logger:"nunit;LogFileName=TestResults.xml" -- "TestRunParameters.Parameter(name=\"AllureResultsDirectory\", value=\"allure-results\")"
+        run: dotnet test --logger:"trx;LogFileName=TestResults.trx" -- "TestRunParameters.Parameter(name=\"AllureResultsDirectory\", value=\"allure-results\")"
 
       - name: Install Allure CLI
         run: |

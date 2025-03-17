@@ -1,8 +1,7 @@
 using Microsoft.Playwright;
 using Allure.NUnit.Attributes;
-using NUnit.Allure.Core;
-using NUnit.Framework.Interfaces;
 using tests.Pages;
+using Allure.NUnit;
 
 namespace tests
 {

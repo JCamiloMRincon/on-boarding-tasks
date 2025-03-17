@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\juan.mortigo\\source\\repos\\on-boarding-project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C0190F33-1D3B-4214-891C-800A47641AC6}|tests\\tests.csproj|c:\\users\\juan.mortigo\\source\\repos\\on-boarding-project\\tests\\apitests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0190F33-1D3B-4214-891C-800A47641AC6}|tests\\tests.csproj|solutionrelative:tests\\apitests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0190F33-1D3B-4214-891C-800A47641AC6}|tests\\tests.csproj|c:\\users\\juan.mortigo\\source\\repos\\on-boarding-project\\tests\\pages\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0190F33-1D3B-4214-891C-800A47641AC6}|tests\\tests.csproj|solutionrelative:tests\\pages\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "APITests.cs",
+              "DocumentMoniker": "C:\\Users\\juan.mortigo\\source\\repos\\on-boarding-project\\tests\\APITests.cs",
+              "RelativeDocumentMoniker": "tests\\APITests.cs",
+              "ToolTip": "C:\\Users\\juan.mortigo\\source\\repos\\on-boarding-project\\tests\\APITests.cs*",
+              "RelativeToolTip": "tests\\APITests.cs*",
+              "ViewState": "AgIAAAwAAAAAAAAAAIA0wBQAAABsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T05:48:33.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginPage.cs",
+              "DocumentMoniker": "C:\\Users\\juan.mortigo\\source\\repos\\on-boarding-project\\tests\\Pages\\LoginPage.cs",
+              "RelativeDocumentMoniker": "tests\\Pages\\LoginPage.cs",
+              "ToolTip": "C:\\Users\\juan.mortigo\\source\\repos\\on-boarding-project\\tests\\Pages\\LoginPage.cs",
+              "RelativeToolTip": "tests\\Pages\\LoginPage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T04:48:08.073Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

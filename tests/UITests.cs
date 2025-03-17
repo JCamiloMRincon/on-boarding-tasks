@@ -1,10 +1,13 @@
 using Microsoft.Playwright;
+using NUnit.Allure.Attributes;
 using NUnit.Framework.Interfaces;
 using tests.Pages;
 
 namespace tests
 {
-    public class UITests : PageTest
+    [TestFixture]
+    [AllureSuite("UITests")]
+    public class UITests
     {
         private IPlaywright _playwright;
         private IBrowser _browser;
@@ -22,6 +25,7 @@ namespace tests
         }
 
         [Test]
+        [AllureFeature("Login")]
         public async Task LoginWithLockedOutUser()
         {
             var loginPage = new LoginPage(_page);
@@ -33,6 +37,7 @@ namespace tests
         }
 
         [Test]
+        [AllureFeature("Shopping")]
         public async Task VerifyShoppingPageTest()
         {
             var loginPage = new LoginPage(_page);

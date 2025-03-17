@@ -6,10 +6,12 @@ using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Playwright;
+using NUnit.Allure.Attributes;
 
 namespace tests
 {
     [TestFixture]
+    [AllureSuite("APITests")]
     public class APITests
     {
         private IPlaywright _playwright;
@@ -37,6 +39,7 @@ namespace tests
         }
 
         [Test]
+        [AllureFeature("User management")]
         public async Task CreateNewUserTest()
         {
             var newUser = new
@@ -55,6 +58,7 @@ namespace tests
         }
 
         [Test]
+        [AllureFeature("User management")]
         public async Task GetUsersListTest()
         {
             var response = await _client.GetAsync("users");

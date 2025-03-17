@@ -50,13 +50,15 @@ jobs:
           dotnet remove ./tests/tests.csproj package Allure.NUnit || true
 
       - name: Install Allure NUnit Adapter (correct version)
-        run: dotnet add ./tests/tests.csproj package Allure.NUnit
+        run: |
+          dotnet add ./tests/tests.csproj package Allure.NUnit
+          dotnet add ./tests/tests.csproj package Allure.Commons
 
       - name: Restore, build, and run tests with Allure
         run: |
           dotnet restore
           dotnet build --configuration Release
-          dotnet test ./tests/tests.csproj --configuration Release --results-directory "allure-results" --logger "Allure;LogFilePath=allure-results"
+          dotnet test ./tests/tests.csproj --configuration Release --results-directory "allure-results" --logger "allure"
 
       - name: Install Allure CLI
         run: npm install -g allure-commandline

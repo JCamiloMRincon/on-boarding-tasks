@@ -1,0 +1,72 @@
+{
+  "uuid": "7222c053-83ca-4309-afb3-bfdd28d05235-tr-0-1006",
+  "historyId": "tests.UITests.VerifyShoppingPageTest",
+  "fullName": "tests.UITests.VerifyShoppingPageTest",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "COL-LT-240401A"
+    },
+    {
+      "name": "package",
+      "value": "tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifyShoppingPageTest"
+    },
+    {
+      "name": "testClass",
+      "value": "UITests"
+    },
+    {
+      "name": "feature",
+      "value": "Shopping"
+    },
+    {
+      "name": "suite",
+      "value": "UITests"
+    }
+  ],
+  "links": [],
+  "name": "VerifyShoppingPageTest",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "VerifyShoppingPageTest"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "VerifyShoppingPageTest",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "204c08cafdcb494ab525157127b6c8d6-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1742236074272,
+      "stop": 1742236080789
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1742236074272,
+  "stop": 1742236080789
+}

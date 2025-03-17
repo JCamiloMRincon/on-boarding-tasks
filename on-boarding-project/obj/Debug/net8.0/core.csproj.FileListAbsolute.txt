@@ -383,3 +383,4 @@ C:\Users\juan.mortigo\source\repos\on-boarding-project\on-boarding-project\obj\D
 C:\Users\juan.mortigo\source\repos\on-boarding-project\on-boarding-project\obj\Debug\net8.0\core.pdb
 C:\Users\juan.mortigo\source\repos\on-boarding-project\on-boarding-project\obj\Debug\net8.0\core.genruntimeconfig.cache
 C:\Users\juan.mortigo\source\repos\on-boarding-project\on-boarding-project\obj\Debug\net8.0\ref\core.dll
+C:\Users\juan.mortigo\source\repos\on-boarding-project\on-boarding-project\obj\Debug\net8.0\core.sourcelink.json

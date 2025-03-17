@@ -77,7 +77,7 @@
             },
             "NUnit3TestAdapter": {
               "target": "Package",
-              "version": "[4.5.0, )"
+              "version": "[5.0.0, )"
             },
             "coverlet.collector": {
               "target": "Package",

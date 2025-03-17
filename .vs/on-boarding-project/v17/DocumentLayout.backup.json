@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\juan.mortigo\\source\\repos\\on-boarding-project\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C0190F33-1D3B-4214-891C-800A47641AC6}|tests\\tests.csproj|c:\\users\\juan.mortigo\\source\\repos\\on-boarding-project\\tests\\tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C0190F33-1D3B-4214-891C-800A47641AC6}|tests\\tests.csproj|solutionrelative:tests\\tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "tests",
+              "DocumentMoniker": "C:\\Users\\juan.mortigo\\source\\repos\\on-boarding-project\\tests\\tests.csproj",
+              "RelativeDocumentMoniker": "tests\\tests.csproj",
+              "ToolTip": "C:\\Users\\juan.mortigo\\source\\repos\\on-boarding-project\\tests\\tests.csproj",
+              "RelativeToolTip": "tests\\tests.csproj",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAuwAkAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-17T18:21:14.135Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

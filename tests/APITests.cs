@@ -7,10 +7,12 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Playwright;
 using NUnit.Allure.Attributes;
+using NUnit.Allure.Core;
 
 namespace tests
 {
     [TestFixture]
+    [AllureNUnit]
     [AllureSuite("APITests")]
     public class APITests
     {

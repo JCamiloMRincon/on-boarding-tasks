@@ -1,0 +1,44 @@
+{
+  "uuid": "75ef3ba1-ae8c-421b-8d8c-bd69979110d3-tc-0-1004",
+  "name": "tests.UITests.VerifyShoppingPageTest",
+  "children": [
+    "7222c053-83ca-4309-afb3-bfdd28d05235-tr-0-1006"
+  ],
+  "befores": [
+    {
+      "name": "Setup",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1742236080789,
+      "stop": 1742236080789
+    }
+  ],
+  "afters": [
+    {
+      "name": "TearDown",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1742236080789,
+      "stop": 1742236080789
+    }
+  ],
+  "links": [],
+  "start": 1742236074272,
+  "stop": 1742236080790
+}

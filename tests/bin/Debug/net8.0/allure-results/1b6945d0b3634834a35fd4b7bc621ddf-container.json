@@ -1,0 +1,44 @@
+{
+  "uuid": "7190b1ac-cc5c-46be-aae9-6724c5299635-tc-0-1004",
+  "name": "tests.UITests.LoginWithLockedOutUser",
+  "children": [
+    "e5b4fd2f-cc32-4510-a439-eb8b1b2dd949-tr-0-1005"
+  ],
+  "befores": [
+    {
+      "name": "Setup",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1742236074270,
+      "stop": 1742236074270
+    }
+  ],
+  "afters": [
+    {
+      "name": "TearDown",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1742236074270,
+      "stop": 1742236074270
+    }
+  ],
+  "links": [],
+  "start": 1742236068603,
+  "stop": 1742236074271
+}

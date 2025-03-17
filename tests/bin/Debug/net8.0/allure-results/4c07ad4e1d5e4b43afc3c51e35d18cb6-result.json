@@ -1,0 +1,53 @@
+{
+  "uuid": "88792eb6-330a-4650-a56b-80f2335d4d54",
+  "historyId": "370b1cb64cbdee3c4e19205fd224c6cf",
+  "testCaseId": "c177d90284991487f82a81218ff3cc5d",
+  "fullName": "tests:tests.UITests.LoginWithLockedOutUser()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "COL-LT-240401A"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "LoginWithLockedOutUser"
+    },
+    {
+      "name": "testClass",
+      "value": "UITests"
+    },
+    {
+      "name": "feature",
+      "value": "Login"
+    },
+    {
+      "name": "suite",
+      "value": "UITests"
+    }
+  ],
+  "links": [],
+  "name": "LoginWithLockedOutUser",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [],
+  "attachments": [],
+  "parameters": [],
+  "start": 1742248513935,
+  "stop": 1742248518684
+}

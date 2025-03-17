@@ -6,7 +6,7 @@ using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Playwright;
-using NUnit.Allure.Attributes;
+using Allure.NUnit.Attributes;
 using NUnit.Allure.Core;
 
 namespace tests

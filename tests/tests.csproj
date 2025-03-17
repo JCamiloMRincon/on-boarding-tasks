@@ -13,11 +13,11 @@
 
   <ItemGroup>
     <PackageReference Include="Allure.Net.Commons" Version="2.12.1" />
+    <PackageReference Include="Allure.NUnit" Version="2.12.1" />
     <PackageReference Include="coverlet.collector" Version="6.0.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
     <PackageReference Include="Microsoft.Playwright.NUnit" Version="1.50.0" />
     <PackageReference Include="NUnit" Version="3.14.0" />
-    <PackageReference Include="NUnit.Allure" Version="1.2.1.1" />
     <PackageReference Include="NUnit.Analyzers" Version="3.9.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="5.0.0" />
   </ItemGroup>

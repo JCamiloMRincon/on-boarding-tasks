@@ -1,5 +1,5 @@
 using Microsoft.Playwright;
-using NUnit.Allure.Attributes;
+using Allure.NUnit.Attributes;
 using NUnit.Allure.Core;
 using NUnit.Framework.Interfaces;
 using tests.Pages;

@@ -76,7 +76,13 @@ jobs:
           pattern: allure-report-*
           merge-multiple: true
           path: combined-allure-report
-
+          
+      - name: Install Allure CLI in merge job
+        run: |
+          npm install -g allure-commandline
+          echo "Allure version:"
+          allure --version
+          
       - name: Merge Allure Reports
         run: |
           allure generate combined-allure-report --clean -o final-allure-report

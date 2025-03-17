@@ -74,7 +74,7 @@ jobs:
       - name: Download Allure Report
         uses: actions/download-artifact@v4
         with:
-          name: allure-report
+          name: allure-report-${{ github.run_id }}
           path: allure-report
 
       - name: Deploy Allure Report to GitHub Pages

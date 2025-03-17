@@ -39,7 +39,10 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Install Playwright
-        run: dotnet tool install --global Microsoft.Playwright.CLI && playwright install
+        run: |
+          dotnet tool install --global Microsoft.Playwright.CLI 
+          dotnet build
+          playwright install
 
       - name: Run Playwright Tests in Parallel
         run: dotnet test --filter FullyQualifiedName~${{ matrix.test_class }} --logger "trx;LogFileName=test_results_${{ matrix.test_class }}.trx"

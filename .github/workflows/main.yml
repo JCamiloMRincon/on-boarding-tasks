@@ -41,29 +41,21 @@ jobs:
       - name: Install Playwright
         run: |
           dotnet tool install --global Microsoft.Playwright.CLI 
-          dotnet build
-          playwright install
+          playwright install --with-deps
 
-      - name: Clean conflicting packages
-        run: |
-          dotnet remove ./tests/tests.csproj package NUnit.Allure || true
-          dotnet remove ./tests/tests.csproj package Allure.NUnit || true
-
-      - name: Install Allure NUnit Adapter (correct version)
+      - name: Ensure Allure NUnit Adapter is installed
         run: |
           dotnet add ./tests/tests.csproj package Allure.NUnit
           dotnet add ./tests/tests.csproj package Allure.Commons
 
-      - name: Restore, build, and run tests with TRX logger
+      - name: Run tests with TRX logger
         run: |
-          dotnet restore
-          dotnet build --configuration Release
           dotnet test ./tests/tests.csproj --configuration Release --results-directory "TestResults" --logger "trx;LogFileName=TestResults.trx"
 
       - name: Install Allure CLI
         run: npm install -g allure-commandline
 
-      - name: Convert TRX to Allure Report
+      - name: Generate Allure Report
         run: |
           mkdir -p allure-results
           allure generate --clean -o ./allure-report || echo "Allure report generation failed"
@@ -92,8 +84,6 @@ jobs:
       - name: Install Allure CLI in merge job
         run: |
           npm install -g allure-commandline
-          echo "Allure version:"
-          allure --version
       
       - name: Merge Allure Reports
         run: |

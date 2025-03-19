@@ -1,0 +1,53 @@
+{
+  "uuid": "c586a1c4-b262-4926-9c51-623ba3cd6df2",
+  "historyId": "ae88311f5c55db2001c5a856f9ca7f06",
+  "testCaseId": "306a38f92a2f32cd904128e437927b5c",
+  "fullName": "tests:tests.APITests.CreateNewUserTest()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "COL-LT-240401A"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateNewUserTest"
+    },
+    {
+      "name": "testClass",
+      "value": "APITests"
+    },
+    {
+      "name": "feature",
+      "value": "User management"
+    },
+    {
+      "name": "suite",
+      "value": "APITests"
+    }
+  ],
+  "links": [],
+  "name": "CreateNewUserTest",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [],
+  "attachments": [],
+  "parameters": [],
+  "start": 1742259635767,
+  "stop": 1742259663636
+}

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "jZ6Hqlc7yj8=",
+  "dgSpecHash": "p1tWVyvZ2Fo=",
   "success": true,
   "projectFilePath": "C:\\Users\\juan.mortigo\\source\\repos\\on-boarding-project\\tests\\tests.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\juan.mortigo\\.nuget\\packages\\allure.commons\\3.5.0.73\\allure.commons.3.5.0.73.nupkg.sha512",
     "C:\\Users\\juan.mortigo\\.nuget\\packages\\allure.net.commons\\2.12.1\\allure.net.commons.2.12.1.nupkg.sha512",
     "C:\\Users\\juan.mortigo\\.nuget\\packages\\allure.nunit\\2.12.1\\allure.nunit.2.12.1.nupkg.sha512",
     "C:\\Users\\juan.mortigo\\.nuget\\packages\\aspectinjector\\2.8.1\\aspectinjector.2.8.1.nupkg.sha512",

@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\juan.mortigo\\source\\repos\\on-boarding-project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C0190F33-1D3B-4214-891C-800A47641AC6}|tests\\tests.csproj|c:\\users\\juan.mortigo\\source\\repos\\on-boarding-project\\tests\\apitests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0190F33-1D3B-4214-891C-800A47641AC6}|tests\\tests.csproj|solutionrelative:tests\\apitests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C0190F33-1D3B-4214-891C-800A47641AC6}|tests\\tests.csproj|c:\\users\\juan.mortigo\\source\\repos\\on-boarding-project\\tests\\uitests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C0190F33-1D3B-4214-891C-800A47641AC6}|tests\\tests.csproj|solutionrelative:tests\\uitests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C0190F33-1D3B-4214-891C-800A47641AC6}|tests\\tests.csproj|c:\\users\\juan.mortigo\\source\\repos\\on-boarding-project\\tests\\tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{C0190F33-1D3B-4214-891C-800A47641AC6}|tests\\tests.csproj|solutionrelative:tests\\tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "APITests.cs",
-              "DocumentMoniker": "C:\\Users\\juan.mortigo\\source\\repos\\on-boarding-project\\tests\\APITests.cs",
-              "RelativeDocumentMoniker": "tests\\APITests.cs",
-              "ToolTip": "C:\\Users\\juan.mortigo\\source\\repos\\on-boarding-project\\tests\\APITests.cs",
-              "RelativeToolTip": "tests\\APITests.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAEwA4AAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T21:53:25.31Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "UITests.cs",
               "DocumentMoniker": "C:\\Users\\juan.mortigo\\source\\repos\\on-boarding-project\\tests\\UITests.cs",
               "RelativeDocumentMoniker": "tests\\UITests.cs",
               "ToolTip": "C:\\Users\\juan.mortigo\\source\\repos\\on-boarding-project\\tests\\UITests.cs",
               "RelativeToolTip": "tests\\UITests.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAADgvwkAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAADwvzMAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T21:51:46.857Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "tests.csproj",
-              "DocumentMoniker": "C:\\Users\\juan.mortigo\\source\\repos\\on-boarding-project\\tests\\tests.csproj",
-              "RelativeDocumentMoniker": "tests\\tests.csproj",
-              "ToolTip": "C:\\Users\\juan.mortigo\\source\\repos\\on-boarding-project\\tests\\tests.csproj",
-              "RelativeToolTip": "tests\\tests.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAewCAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-17T18:21:14.135Z",
+              "WhenOpened": "2025-03-19T02:20:07.627Z",
               "EditorCaption": ""
             }
           ]

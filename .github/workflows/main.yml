@@ -40,7 +40,8 @@ jobs:
 
       - name: Install Playwright
         run: |
-          dotnet tool install --global Microsoft.Playwright.CLI 
+          dotnet tool install --global Microsoft.Playwright.CLI
+          dotnet build --configuration Release
           playwright install --with-deps
 
       - name: Ensure Allure NUnit Adapter is installed

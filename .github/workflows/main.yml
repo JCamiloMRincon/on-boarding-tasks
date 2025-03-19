@@ -130,3 +130,4 @@ jobs:
           branch: gh-pages
           folder: ./final-allure-report
           clean: true
+          token: ${{ secrets.GITHUB_TOKEN }}

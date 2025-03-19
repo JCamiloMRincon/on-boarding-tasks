@@ -103,16 +103,24 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
-      - name: Download Final Allure Report
-        uses: actions/download-artifact@v4
+        if: always()
+        continue-on-error: true
         with:
-          name: final-allure-report-${{ github.run_id }}
-          path: final-allure-report
-
-      - name: Deploy Allure Report to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+          ref: gh-pages
+          path: gh-pages
+          
+      - name: Build test report
+        uses: simple-elf/allure-report-action@v1.7
+        if: always()
         with:
-          branch: main
-          folder: final-allure-report
-          clean: true
+          gh_pages: gh-pages
+          allure_history: allure-history
+          allure_results: ./allure-results
+
+      - name: Publish test report
+        uses: peaceiris/actions-gh-pages@v3
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./allure-history

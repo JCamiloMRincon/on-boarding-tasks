@@ -101,20 +101,18 @@ jobs:
     if: always()
 
     steps:
-      - name: Checkout gh-pages branch
+      - name: Checkout code
         uses: actions/checkout@v3
-        with:
-          ref: gh-pages
 
       - name: Download Final Allure Report
         uses: actions/download-artifact@v4
         with:
           name: final-allure-report-${{ github.run_id }}
-          path: ./allure-history
+          path: final-allure-report
 
-      - name: Publish Allure Report to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy Allure Report to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: ./allure-history
+          branch: main
+          folder: final-allure-report
+          clean: true

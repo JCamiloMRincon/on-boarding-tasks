@@ -16,10 +16,10 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Install dependencies
-        run: dotnet restore ./tests/tests.csproj
+        run: dotnet restore
 
       - name: Build project
-        run: dotnet build ./tests/tests.csproj --configuration Release
+        run: dotnet build --configuration Release
 
   test:
     needs: build

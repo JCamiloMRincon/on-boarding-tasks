@@ -44,6 +44,10 @@ jobs:
           dotnet build --configuration Release
           playwright install --with-deps
 
+      - name: Ensure Playwright assets are present
+        run: |
+          dotnet build --configuration Release --no-restore
+
       - name: Ensure Allure NUnit Adapter is installed
         run: |
           dotnet add ./tests/tests.csproj package Allure.NUnit

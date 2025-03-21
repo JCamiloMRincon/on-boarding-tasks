@@ -63,6 +63,7 @@ jobs:
 
       - name: Generate Allure Report
         run: |
+          ls -la allure-results
           allure generate --clean -o ./allure-report || echo "Allure report generation failed"
 
       - name: Upload Allure Report Artifact

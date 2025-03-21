@@ -52,10 +52,14 @@ jobs:
         run: |
           dotnet add ./tests/tests.csproj package Allure.NUnit
           dotnet add ./tests/tests.csproj package Allure.Commons
-
+          dotnet restore
+      
+      - name: Create Allure Results Directory
+        run: mkdir -p allure-results
+        
       - name: Run tests with TRX logger
         run: |
-          dotnet test ./tests/tests.csproj --configuration Release --results-directory "TestResults" --logger "trx;LogFileName=TestResults.trx"
+          dotnet test ./tests/tests.csproj --configuration Release --results-directory "allure-results" --logger "trx;LogFileName=TestResults.trx"
 
       - name: Install Allure CLI
         run: |
@@ -90,7 +94,6 @@ jobs:
       - name: Install Allure CLI in merge job
         run: |
           npm install -g allure-commandline
-          mkdir -p allure-results
       
       - name: Merge Allure Reports
         run: |

@@ -41,35 +41,27 @@ jobs:
       - name: Install Playwright
         run: |
           dotnet tool install --global Microsoft.Playwright.CLI
-          dotnet build ./tests/tests.csproj --configuration Release
+          dotnet build --configuration Release
           playwright install --with-deps
 
       - name: Ensure Playwright assets are present
         run: |
-          dotnet build ./tests/tests.csproj --configuration Release --no-restore
+          dotnet build --configuration Release --no-restore
 
-      - name: Clean conflicting packages
-        run: |
-          dotnet remove ./tests/tests.csproj package NUnit.Allure || true
-          dotnet remove ./tests/tests.csproj package Allure.NUnit || true
-
-      - name: Install Allure NUnit Adapter (correct version)
+      - name: Ensure Allure NUnit Adapter is installed
         run: |
           dotnet add ./tests/tests.csproj package Allure.NUnit
           dotnet add ./tests/tests.csproj package Allure.Commons
 
-      - name: Restore, build, and run tests with TRX logger
+      - name: Run tests with TRX logger
         run: |
-          dotnet restore
-          dotnet build --configuration Release
-          dotnet test ./tests/tests.csproj --configuration Release --results-directory "allure-results" --logger "trx;LogFileName=TestResults/TestResults.trx"
+          dotnet test ./tests/tests.csproj --configuration Release --results-directory "TestResults" --logger "trx;LogFileName=TestResults.trx"
 
       - name: Install Allure CLI
         run: npm install -g allure-commandline
 
-      - name: Convert TRX to Allure Report
+      - name: Generate Allure Report
         run: |
-          mkdir -p allure-results
           allure generate --clean -o ./allure-report || echo "Allure report generation failed"
 
       - name: Upload Allure Report Artifact
@@ -96,8 +88,6 @@ jobs:
       - name: Install Allure CLI in merge job
         run: |
           npm install -g allure-commandline
-          echo "Allure version:"
-          allure --version
       
       - name: Merge Allure Reports
         run: |
@@ -115,19 +105,25 @@ jobs:
     if: always()
 
     steps:
-      - name: Checkout code
+      - name: Get Allure history
         uses: actions/checkout@v3
-
-      - name: Download Final Allure Report
-        uses: actions/download-artifact@v4
+        if: always()
+        continue-on-error: true
         with:
-          name: final-allure-report-${{ github.run_id }}
-          path: final-allure-report
+          ref: gh-pages
+          path: gh-pages
 
-      - name: Deploy Allure Report to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Allure Report action from marketplace
+        uses: simple-elf/allure-report-action@master
+        if: always()
         with:
-          branch: gh-pages
-          folder: ./final-allure-report
-          clean: true
-          token: ${{ secrets.GITHUB_TOKEN }}
+          allure_results: allure-results
+          allure_history: allure-history
+
+      - name: Deploy report to Github Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v2
+        env:
+          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: allure-history

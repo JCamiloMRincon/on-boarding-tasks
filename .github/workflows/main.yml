@@ -64,11 +64,6 @@ jobs:
       - name: Install Allure CLI and trx2allure
         run: |
           npm install -g allure-commandline
-          pip install allure-trx2allure
-          
-      - name: Convert TRX to Allure JSON
-        run: |
-          python -m trx2allure allure-results/TestResults.trx allure-results
       
       - name: Generate Allure Report
         run: |

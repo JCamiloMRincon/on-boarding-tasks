@@ -40,9 +40,13 @@ jobs:
 
       - name: Install Playwright
         run: |
-          dotnet tool install --global Microsoft.Playwright.CLI 
-          dotnet build
-          playwright install
+          dotnet tool install --global Microsoft.Playwright.CLI
+          dotnet build ./tests/tests.csproj --configuration Release
+          playwright install --with-deps
+
+      - name: Ensure Playwright assets are present
+        run: |
+          dotnet build ./tests/tests.csproj --configuration Release --no-restore
 
       - name: Clean conflicting packages
         run: |
@@ -126,3 +130,4 @@ jobs:
           branch: gh-pages
           folder: ./final-allure-report
           clean: true
+          token: ${{ secrets.GITHUB_TOKEN }}

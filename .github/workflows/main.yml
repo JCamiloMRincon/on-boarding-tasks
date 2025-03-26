@@ -8,10 +8,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8.0.x'
 
@@ -31,52 +31,34 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8.0.x'
 
       - name: Install Playwright
         run: |
           dotnet tool install --global Microsoft.Playwright.CLI
-          dotnet build ./tests/tests.csproj --configuration Release
           playwright install --with-deps
 
-      - name: Ensure Playwright assets are present
+      - name: Install Allure NUnit Adapter
         run: |
-          dotnet build ./tests/tests.csproj --configuration Release --no-restore
+          dotnet add package Allure.NUnit
+          dotnet add package Allure.Commons
 
-      - name: Clean conflicting packages
+      - name: Run tests with Allure logger
         run: |
-          dotnet remove ./tests/tests.csproj package NUnit.Allure || true
-          dotnet remove ./tests/tests.csproj package Allure.NUnit || true
+          dotnet test --configuration Release \
+            --logger "trx;LogFileName=TestResults.trx" \
+            --logger "Allure"
 
-      - name: Install Allure NUnit Adapter (correct version)
-        run: |
-          dotnet add ./tests/tests.csproj package Allure.NUnit
-          dotnet add ./tests/tests.csproj package Allure.Commons
-
-      - name: Restore, build, and run tests with TRX logger
-        run: |
-          dotnet restore
-          dotnet build --configuration Release
-          dotnet test ./tests/tests.csproj --configuration Release --results-directory "allure-results" --logger "trx;LogFileName=TestResults.trx"
-
-      - name: Install Allure CLI
-        run: npm install -g allure-commandline
-
-      - name: Convert TRX to Allure Report
-        run: |
-          mkdir -p allure-results
-          allure generate --clean -o ./allure-report || echo "Allure report generation failed"
-
-      - name: Upload Allure Report Artifact
+      - name: Upload Allure Results
         uses: actions/upload-artifact@v4
         with:
-          name: allure-report-${{ matrix.test_class }}-${{ github.run_id }}
-          path: allure-report
+          name: allure-results-${{ matrix.test_class }}-${{ github.run_id }}
+          path: allure-results
 
   merge-reports:
     needs: test
@@ -84,25 +66,22 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Download Allure Report Artifacts
+      - name: Download Allure Results
         uses: actions/download-artifact@v4
         with:
-          pattern: allure-report-*
+          pattern: allure-results-*
           merge-multiple: true
-          path: combined-allure-report
+          path: combined-allure-results
       
-      - name: Install Allure CLI in merge job
-        run: |
-          npm install -g allure-commandline
-          echo "Allure version:"
-          allure --version
-      
+      - name: Install Allure CLI
+        run: npm install -g allure-commandline
+
       - name: Merge Allure Reports
         run: |
-          allure generate combined-allure-report --clean -o final-allure-report || echo "Allure merge failed"
-      
+          allure generate combined-allure-results --clean -o final-allure-report || echo "Allure merge failed"
+
       - name: Upload Final Merged Allure Report
         uses: actions/upload-artifact@v4
         with:
@@ -116,7 +95,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Download Final Allure Report
         uses: actions/download-artifact@v4
@@ -128,6 +107,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: ./final-allure-report
+          folder: final-allure-report
           clean: true
-          token: ${{ secrets.GITHUB_TOKEN }}

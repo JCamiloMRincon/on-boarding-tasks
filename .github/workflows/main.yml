@@ -38,10 +38,14 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
-      - name: Install Playwright
-        run: |
-          dotnet tool install --global Microsoft.Playwright.CLI
-          playwright install --with-deps
+      - name: Install Playwright CLI
+        run: dotnet tool install --global Microsoft.Playwright.CLI
+
+      - name: Build project (Required for Playwright)
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Install Playwright Browsers
+        run: playwright install --with-deps
 
       - name: Install Allure NUnit Adapter
         run: |

@@ -1,0 +1,12 @@
+{
+  "uuid": "8a5d1ce4-7c7f-4567-a581-7e4301538ae7",
+  "name": "tests.UITests.VerifyShoppingPageTest",
+  "children": [
+    "f6b43d0c-5e07-464c-8f45-7d91a93c8d22"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1743025909367,
+  "stop": 1743025911243
+}

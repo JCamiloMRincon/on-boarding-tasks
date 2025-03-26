@@ -62,7 +62,7 @@ jobs:
         run: |
           dotnet restore
           dotnet build --configuration Release
-          dotnet test ./tests/tests.csproj --configuration Release --results-directory "allure-results" --logger "trx;LogFileName=TestResults.trx"
+          dotnet test --configuration Release --results-directory "allure-results" --logger "trx;LogFileName=TestResults.trx"
 
       - name: Install Allure CLI
         run: npm install -g allure-commandline

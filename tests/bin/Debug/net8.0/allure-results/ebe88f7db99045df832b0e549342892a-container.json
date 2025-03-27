@@ -1,0 +1,12 @@
+{
+  "uuid": "26f8bbdb-b81c-4262-a2f2-3762b66b23ba",
+  "name": "tests.UITests.LoginWithLockedOutUser",
+  "children": [
+    "242648a8-86c5-4664-a520-9564423ddb5a"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1743050673763,
+  "stop": 1743050674178
+}

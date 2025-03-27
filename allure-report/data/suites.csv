@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","438","GetUsersListTest","","Thu Mar 27 00:32:09 GMT-05:00 2025","failed","Thu Mar 27 00:32:09 GMT-05:00 2025","","tests.APITests","tests.APITests",""
+"","491","CreateNewUserTest","","Thu Mar 27 00:32:08 GMT-05:00 2025","failed","Thu Mar 27 00:32:09 GMT-05:00 2025","","tests.APITests","tests.APITests",""
+"","486","LoginWithLockedOutUser","","Thu Mar 27 00:32:09 GMT-05:00 2025","failed","Thu Mar 27 00:32:09 GMT-05:00 2025","","tests.UITests","tests.UITests",""
+"","1797","VerifyShoppingPageTest","","Thu Mar 27 00:32:09 GMT-05:00 2025","failed","Thu Mar 27 00:32:11 GMT-05:00 2025","","tests.UITests","tests.UITests",""

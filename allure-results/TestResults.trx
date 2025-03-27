@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TestRun id="5ed58d2a-f704-4cd9-9486-c64e74835fa0" name="CamiloMortigo@EPCOBOGW0221 2025-03-26 16:51:48" runUser="AzureAD\CamiloMortigo" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <Times creation="2025-03-26T16:51:48.5619278-05:00" queuing="2025-03-26T16:51:48.5619282-05:00" start="2025-03-26T16:51:31.5836101-05:00" finish="2025-03-26T16:51:51.3048568-05:00" />
-  <TestSettings name="default" id="8373d02d-aa1c-47ad-9e62-c724a4a2c178">
-    <Deployment runDeploymentRoot="CamiloMortigo_EPCOBOGW0221_2025-03-26_16_51_48" />
+<TestRun id="e266cdeb-2915-444c-806b-34d551c5bbc3" name="CamiloMortigo@EPCOBOGW0221 2025-03-27 00:32:09" runUser="AzureAD\CamiloMortigo" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-03-27T00:32:09.9346023-05:00" queuing="2025-03-27T00:32:09.9346026-05:00" start="2025-03-27T00:32:08.0664692-05:00" finish="2025-03-27T00:32:11.8471808-05:00" />
+  <TestSettings name="default" id="8059366a-bddc-4891-8eb3-d6ccfd3c367a">
+    <Deployment runDeploymentRoot="CamiloMortigo_EPCOBOGW0221_2025-03-27_00_32_09" />
   </TestSettings>
   <Results>
-    <UnitTestResult executionId="d9639fb9-2cf6-400f-a9ca-f13de2917af4" testId="627b2988-67d9-38a5-c80b-79ebb8a85e25" testName="GetUsersListTest" computerName="EPCOBOGW0221" duration="00:00:00.4434460" startTime="2025-03-26T16:51:48.5253691-05:00" endTime="2025-03-26T16:51:48.9688176-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d9639fb9-2cf6-400f-a9ca-f13de2917af4">
+    <UnitTestResult executionId="29b25dc5-ea76-445a-b836-8de96568ede0" testId="627b2988-67d9-38a5-c80b-79ebb8a85e25" testName="GetUsersListTest" computerName="EPCOBOGW0221" duration="00:00:00.4379260" startTime="2025-03-27T00:32:09.0463739-05:00" endTime="2025-03-27T00:32:09.4842993-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="29b25dc5-ea76-445a-b836-8de96568ede0">
       <Output>
         <ErrorInfo>
           <Message>Microsoft.Playwright.PlaywrightException : Executable doesn't exist at C:\Users\CamiloMortigo\AppData\Local\ms-playwright\chromium_headless_shell-1155\chrome-win\headless_shell.exe&#xD;
@@ -40,42 +40,7 @@ TearDown : System.NullReferenceException : Object reference not set to an instan
         </ErrorInfo>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="ffe699fd-2d67-4ab0-aab7-bbb37de466bc" testId="8789fb38-601e-45ce-988c-0ad58291c7ef" testName="CreateNewUserTest" computerName="EPCOBOGW0221" duration="00:00:02.5224680" startTime="2025-03-26T16:51:46.0017708-05:00" endTime="2025-03-26T16:51:48.5241844-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ffe699fd-2d67-4ab0-aab7-bbb37de466bc">
-      <Output>
-        <ErrorInfo>
-          <Message>Microsoft.Playwright.PlaywrightException : Executable doesn't exist at C:\Users\CamiloMortigo\AppData\Local\ms-playwright\chromium_headless_shell-1155\chrome-win\headless_shell.exe&#xD;
-╔════════════════════════════════════════════════════════════╗&#xD;
-║ Looks like Playwright was just installed or updated.       ║&#xD;
-║ Please run the following command to download new browsers: ║&#xD;
-║                                                            ║&#xD;
-║     pwsh bin/Debug/netX/playwright.ps1 install             ║&#xD;
-║                                                            ║&#xD;
-║ &lt;3 Playwright Team                                         ║&#xD;
-╚════════════════════════════════════════════════════════════╝&#xD;
-TearDown : System.NullReferenceException : Object reference not set to an instance of an object.</Message>
-          <StackTrace>   at Microsoft.Playwright.Transport.Connection.InnerSendMessageToServerAsync[T](ChannelOwner object, String method, Dictionary`2 dictionary, Boolean keepNulls) in /_/src/Playwright/Transport/Connection.cs:line 206&#xD;
-   at Microsoft.Playwright.Transport.Connection.WrapApiCallAsync[T](Func`1 action, Boolean isInternal) in /_/src/Playwright/Transport/Connection.cs:line 535&#xD;
-   at Microsoft.Playwright.Core.BrowserType.LaunchAsync(BrowserTypeLaunchOptions options) in /_/src/Playwright/Core/BrowserType.cs:line 56&#xD;
-   at tests.APITests.Setup() in C:\Users\CamiloMortigo\Documents\on-boarding-tasks\tests\APITests.cs:line 26&#xD;
-   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()&#xD;
-   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)&#xD;
-   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(Func`1 invoke)&#xD;
-   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUpOrTearDownMethod(TestExecutionContext context, IMethodInfo method)&#xD;
-   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUp(TestExecutionContext context)&#xD;
-   at NUnit.Framework.Internal.Commands.SetUpTearDownCommand.&lt;&gt;c__DisplayClass0_0.&lt;.ctor&gt;b__0(TestExecutionContext context)&#xD;
-   at NUnit.Framework.Internal.Commands.BeforeAndAfterTestCommand.&lt;&gt;c__DisplayClass1_0.&lt;Execute&gt;b__0()&#xD;
-   at NUnit.Framework.Internal.Commands.DelegatingTestCommand.RunTestMethodInThreadAbortSafeZone(TestExecutionContext context, Action action)&#xD;
---TearDown&#xD;
-   at tests.APITests.Cleanup() in C:\Users\CamiloMortigo\Documents\on-boarding-tasks\tests\APITests.cs:line 71&#xD;
-   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.GetResult()&#xD;
-   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(Func`1 invoke)&#xD;
-   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUpOrTearDownMethod(TestExecutionContext context, IMethodInfo method)&#xD;
-   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunTearDown(TestExecutionContext context)
-</StackTrace>
-        </ErrorInfo>
-      </Output>
-    </UnitTestResult>
-    <UnitTestResult executionId="14b53143-acef-4ce1-9c71-0960deaa3237" testId="5fd7123a-f293-a1c8-8b3b-07f7a689fdc2" testName="LoginWithLockedOutUser" computerName="EPCOBOGW0221" duration="00:00:00.3955659" startTime="2025-03-26T16:51:48.9720582-05:00" endTime="2025-03-26T16:51:49.3676234-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="14b53143-acef-4ce1-9c71-0960deaa3237">
+    <UnitTestResult executionId="dcc93db5-e04d-47da-95cb-42f3ed896bfb" testId="4fd3b60f-141c-c701-940e-e758a363de87" testName="VerifyShoppingPageTest" computerName="EPCOBOGW0221" duration="00:00:01.7965880" startTime="2025-03-27T00:32:09.9737726-05:00" endTime="2025-03-27T00:32:11.7703602-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dcc93db5-e04d-47da-95cb-42f3ed896bfb">
       <Output>
         <ErrorInfo>
           <Message>Microsoft.Playwright.PlaywrightException : Executable doesn't exist at C:\Users\CamiloMortigo\AppData\Local\ms-playwright\chromium_headless_shell-1155\chrome-win\headless_shell.exe&#xD;
@@ -110,7 +75,42 @@ TearDown : System.NullReferenceException : Object reference not set to an instan
         </ErrorInfo>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="4a526e36-cdd7-4076-aaf6-9b689420c6a6" testId="4fd3b60f-141c-c701-940e-e758a363de87" testName="VerifyShoppingPageTest" computerName="EPCOBOGW0221" duration="00:00:01.8784450" startTime="2025-03-26T16:51:49.3676539-05:00" endTime="2025-03-26T16:51:51.2460980-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4a526e36-cdd7-4076-aaf6-9b689420c6a6">
+    <UnitTestResult executionId="c3e8d786-f86d-42d7-b160-1e10a062e9b4" testId="8789fb38-601e-45ce-988c-0ad58291c7ef" testName="CreateNewUserTest" computerName="EPCOBOGW0221" duration="00:00:00.4912560" startTime="2025-03-27T00:32:08.5540879-05:00" endTime="2025-03-27T00:32:09.0452873-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c3e8d786-f86d-42d7-b160-1e10a062e9b4">
+      <Output>
+        <ErrorInfo>
+          <Message>Microsoft.Playwright.PlaywrightException : Executable doesn't exist at C:\Users\CamiloMortigo\AppData\Local\ms-playwright\chromium_headless_shell-1155\chrome-win\headless_shell.exe&#xD;
+╔════════════════════════════════════════════════════════════╗&#xD;
+║ Looks like Playwright was just installed or updated.       ║&#xD;
+║ Please run the following command to download new browsers: ║&#xD;
+║                                                            ║&#xD;
+║     pwsh bin/Debug/netX/playwright.ps1 install             ║&#xD;
+║                                                            ║&#xD;
+║ &lt;3 Playwright Team                                         ║&#xD;
+╚════════════════════════════════════════════════════════════╝&#xD;
+TearDown : System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+          <StackTrace>   at Microsoft.Playwright.Transport.Connection.InnerSendMessageToServerAsync[T](ChannelOwner object, String method, Dictionary`2 dictionary, Boolean keepNulls) in /_/src/Playwright/Transport/Connection.cs:line 206&#xD;
+   at Microsoft.Playwright.Transport.Connection.WrapApiCallAsync[T](Func`1 action, Boolean isInternal) in /_/src/Playwright/Transport/Connection.cs:line 535&#xD;
+   at Microsoft.Playwright.Core.BrowserType.LaunchAsync(BrowserTypeLaunchOptions options) in /_/src/Playwright/Core/BrowserType.cs:line 56&#xD;
+   at tests.APITests.Setup() in C:\Users\CamiloMortigo\Documents\on-boarding-tasks\tests\APITests.cs:line 26&#xD;
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()&#xD;
+   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUpOrTearDownMethod(TestExecutionContext context, IMethodInfo method)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUp(TestExecutionContext context)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownCommand.&lt;&gt;c__DisplayClass0_0.&lt;.ctor&gt;b__0(TestExecutionContext context)&#xD;
+   at NUnit.Framework.Internal.Commands.BeforeAndAfterTestCommand.&lt;&gt;c__DisplayClass1_0.&lt;Execute&gt;b__0()&#xD;
+   at NUnit.Framework.Internal.Commands.DelegatingTestCommand.RunTestMethodInThreadAbortSafeZone(TestExecutionContext context, Action action)&#xD;
+--TearDown&#xD;
+   at tests.APITests.Cleanup() in C:\Users\CamiloMortigo\Documents\on-boarding-tasks\tests\APITests.cs:line 71&#xD;
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.GetResult()&#xD;
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(Func`1 invoke)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunSetUpOrTearDownMethod(TestExecutionContext context, IMethodInfo method)&#xD;
+   at NUnit.Framework.Internal.Commands.SetUpTearDownItem.RunTearDown(TestExecutionContext context)
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="99407c34-f70d-4310-b14e-20b7fcf42b3a" testId="5fd7123a-f293-a1c8-8b3b-07f7a689fdc2" testName="LoginWithLockedOutUser" computerName="EPCOBOGW0221" duration="00:00:00.4864970" startTime="2025-03-27T00:32:09.4872251-05:00" endTime="2025-03-27T00:32:09.9737212-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="99407c34-f70d-4310-b14e-20b7fcf42b3a">
       <Output>
         <ErrorInfo>
           <Message>Microsoft.Playwright.PlaywrightException : Executable doesn't exist at C:\Users\CamiloMortigo\AppData\Local\ms-playwright\chromium_headless_shell-1155\chrome-win\headless_shell.exe&#xD;
@@ -148,27 +148,27 @@ TearDown : System.NullReferenceException : Object reference not set to an instan
   </Results>
   <TestDefinitions>
     <UnitTest name="GetUsersListTest" storage="c:\users\camilomortigo\documents\on-boarding-tasks\tests\bin\release\net8.0\tests.dll" id="627b2988-67d9-38a5-c80b-79ebb8a85e25">
-      <Execution id="d9639fb9-2cf6-400f-a9ca-f13de2917af4" />
+      <Execution id="29b25dc5-ea76-445a-b836-8de96568ede0" />
       <TestMethod codeBase="C:\Users\CamiloMortigo\Documents\on-boarding-tasks\tests\bin\Release\net8.0\tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="tests.APITests" name="GetUsersListTest" />
     </UnitTest>
     <UnitTest name="CreateNewUserTest" storage="c:\users\camilomortigo\documents\on-boarding-tasks\tests\bin\release\net8.0\tests.dll" id="8789fb38-601e-45ce-988c-0ad58291c7ef">
-      <Execution id="ffe699fd-2d67-4ab0-aab7-bbb37de466bc" />
+      <Execution id="c3e8d786-f86d-42d7-b160-1e10a062e9b4" />
       <TestMethod codeBase="C:\Users\CamiloMortigo\Documents\on-boarding-tasks\tests\bin\Release\net8.0\tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="tests.APITests" name="CreateNewUserTest" />
     </UnitTest>
     <UnitTest name="LoginWithLockedOutUser" storage="c:\users\camilomortigo\documents\on-boarding-tasks\tests\bin\release\net8.0\tests.dll" id="5fd7123a-f293-a1c8-8b3b-07f7a689fdc2">
-      <Execution id="14b53143-acef-4ce1-9c71-0960deaa3237" />
+      <Execution id="99407c34-f70d-4310-b14e-20b7fcf42b3a" />
       <TestMethod codeBase="C:\Users\CamiloMortigo\Documents\on-boarding-tasks\tests\bin\Release\net8.0\tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="tests.UITests" name="LoginWithLockedOutUser" />
     </UnitTest>
     <UnitTest name="VerifyShoppingPageTest" storage="c:\users\camilomortigo\documents\on-boarding-tasks\tests\bin\release\net8.0\tests.dll" id="4fd3b60f-141c-c701-940e-e758a363de87">
-      <Execution id="4a526e36-cdd7-4076-aaf6-9b689420c6a6" />
+      <Execution id="dcc93db5-e04d-47da-95cb-42f3ed896bfb" />
       <TestMethod codeBase="C:\Users\CamiloMortigo\Documents\on-boarding-tasks\tests\bin\Release\net8.0\tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="tests.UITests" name="VerifyShoppingPageTest" />
     </UnitTest>
   </TestDefinitions>
   <TestEntries>
-    <TestEntry testId="627b2988-67d9-38a5-c80b-79ebb8a85e25" executionId="d9639fb9-2cf6-400f-a9ca-f13de2917af4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="8789fb38-601e-45ce-988c-0ad58291c7ef" executionId="ffe699fd-2d67-4ab0-aab7-bbb37de466bc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="5fd7123a-f293-a1c8-8b3b-07f7a689fdc2" executionId="14b53143-acef-4ce1-9c71-0960deaa3237" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="4fd3b60f-141c-c701-940e-e758a363de87" executionId="4a526e36-cdd7-4076-aaf6-9b689420c6a6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="627b2988-67d9-38a5-c80b-79ebb8a85e25" executionId="29b25dc5-ea76-445a-b836-8de96568ede0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4fd3b60f-141c-c701-940e-e758a363de87" executionId="dcc93db5-e04d-47da-95cb-42f3ed896bfb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8789fb38-601e-45ce-988c-0ad58291c7ef" executionId="c3e8d786-f86d-42d7-b160-1e10a062e9b4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5fd7123a-f293-a1c8-8b3b-07f7a689fdc2" executionId="99407c34-f70d-4310-b14e-20b7fcf42b3a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
   </TestEntries>
   <TestLists>
     <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />

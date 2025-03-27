@@ -9,6 +9,7 @@
     <IsTestProject>true</IsTestProject>
 	<AllureConfigDirectory>allure-config</AllureConfigDirectory>
 	<AllureResultsDirectory>allure-results</AllureResultsDirectory>
+    <GenerateAllureReport>true</GenerateAllureReport>
   </PropertyGroup>
 
   <ItemGroup>

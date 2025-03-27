@@ -69,7 +69,7 @@ jobs:
 
       - name: Generate Allure Results
         run: |
-          allure generate allure-results --clean -o allure-report
+          npx allure-commandline generate allure-results --clean -o allure-report
 
       - name: Upload Allure Report Artifact
         uses: actions/upload-artifact@v4
@@ -100,7 +100,7 @@ jobs:
       
       - name: Merge Allure Reports
         run: |
-          allure generate combined-allure-report --clean -o final-allure-report || echo "Allure merge failed"
+          npx allure-commandline generate combined-allure-report --clean -o final-allure-report || echo "Allure merge failed"
       
       - name: Upload Final Merged Allure Report
         uses: actions/upload-artifact@v4

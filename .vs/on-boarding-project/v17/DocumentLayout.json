@@ -44,15 +44,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "tests",
+              "Title": "tests.csproj",
               "DocumentMoniker": "C:\\Users\\CamiloMortigo\\Documents\\on-boarding-tasks\\tests\\tests.csproj",
               "RelativeDocumentMoniker": "tests\\tests.csproj",
               "ToolTip": "C:\\Users\\CamiloMortigo\\Documents\\on-boarding-tasks\\tests\\tests.csproj",
               "RelativeToolTip": "tests\\tests.csproj",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-27T04:39:28.195Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T04:39:28.195Z"
             },
             {
               "$type": "Document",
@@ -64,8 +63,7 @@
               "RelativeToolTip": "tests\\APITests.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T04:35:25.516Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T04:35:25.516Z"
             },
             {
               "$type": "Document",
@@ -77,8 +75,7 @@
               "RelativeToolTip": "tests\\TestSetup.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAmwBEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T21:50:27.761Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-26T21:50:27.761Z"
             }
           ]
         }

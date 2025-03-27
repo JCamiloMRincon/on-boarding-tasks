@@ -1,0 +1,23 @@
+# Visual Studio Configuration
+.vs/
+
+# Compilation files
+bin/
+obj/
+out/
+
+# Node.js settings and dependencies
+node_modules/
+package-lock.json
+
+# Allure Reprots
+allure-report/
+allure-results/
+
+# TRX files
+TestResults/
+*.trx
+
+# User specific configuration
+.vscode/
+.idea/

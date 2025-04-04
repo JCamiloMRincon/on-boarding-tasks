@@ -2,9 +2,8 @@
 .vs/
 
 # Compilation files
-bin/
-obj/
-out/
+**/bin/
+**/obj/
 
 # Node.js settings and dependencies
 node_modules/
